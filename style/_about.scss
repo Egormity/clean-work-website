@@ -1,14 +1,15 @@
 .about {
   @include grid-colums-primary-center;
-  @include margin-top-secondary;
+  margin-top: var(--space-small);
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 3vw;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-column-gap: 3rem;
   align-items: center;
 
   &__photo {
     border-radius: 2rem;
+    box-shadow: var(--shadow-2);
 
     &--img {
       width: 100%;

@@ -1,0 +1,60 @@
+.reviews {
+  grid-column: 1 / -1;
+  margin-top: var(--space-huge);
+  padding: var(--space-big) 0;
+  background-image: linear-gradient(
+      to bottom,
+      var(--color-primary-dark08),
+      var(--color-primary-dark08)
+    ),
+    url('/images/reviews.jpg');
+  background-position: center;
+  background-size: cover;
+  color: var(--color-white);
+
+  display: grid;
+  @include grid-columns-primary;
+
+  &__heading {
+    grid-column: 1/ -1;
+    justify-self: center;
+    margin-bottom: var(--space-small);
+  }
+
+  &__cards--container {
+    @include grid-colums-primary-center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &__card {
+    background-color: var(--color-primary-light);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    box-shadow: var(--shadow-2);
+
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    align-content: start;
+  }
+
+  &__photo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    margin-top: var(--space-smallest);
+    grid-column: 1 / -1;
+  }
+}

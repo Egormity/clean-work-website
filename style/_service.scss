@@ -1,9 +1,9 @@
 .service {
   @include grid-colums-primary-center;
-  @include margin-top-main;
+  margin-top: var(--space-huge);
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   align-items: center;
 
   &__content {

@@ -26,8 +26,12 @@
 @mixin grid-columns-primary {
   grid-template-columns: 15vw 1fr 15vw;
 
-  @include responsive(px1500) {
+  @include responsive(px1800) {
     grid-template-columns: 8vw 1fr 8vw;
+  }
+
+  @include responsive(px1500) {
+    grid-template-columns: 5.5vw 1fr 8vw;
   }
 
   @include responsive(px1000) {
@@ -37,15 +41,6 @@
 
 @mixin grid-colums-primary-center {
   grid-column: 2 / 3;
-}
-
-//--- SPACE ---//
-@mixin margin-top-main {
-  margin-top: 12rem;
-}
-
-@mixin margin-top-secondary {
-  margin-top: 3rem;
 }
 
 //--- RESPONSIVE DESIGN ---//
@@ -153,13 +148,13 @@
   }
 
   @if $breakpoint == px1800 {
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (max-width: 112.5em) {
       @content;
     }
   }
 
   @if $breakpoint == px1900 {
-    @media only screen and (min-width: 118.75em) {
+    @media only screen and (max-width: 118.75em) {
       @content;
     }
   }

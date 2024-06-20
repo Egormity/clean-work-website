@@ -6,6 +6,9 @@
   --color-primary-light05: rgba(124, 183, 235, 0.5);
   --color-primary-dark05: rgba(77, 130, 209, 0.5);
 
+  --color-primary-light08: rgba(124, 183, 235, 0.8);
+  --color-primary-dark08: rgba(77, 130, 209, 0.8);
+
   --color-yellow: #e5e50f;
 
   --color-grey-light-1: #f7f7f7;
@@ -31,6 +34,7 @@
 
   --color-black: #000;
   --color-black-01: rgba(0, 0, 0, 0.1);
+  --color-black-015: rgba(0, 0, 0, 0.15);
   --color-black-02: rgba(0, 0, 0, 0.2);
   --color-black-03: rgba(0, 0, 0, 0.3);
   --color-black-04: rgba(0, 0, 0, 0.4);
@@ -55,11 +59,22 @@
   --border-dark-4: 0.1rem solid var(--color-grey-dark-4);
 
   // Shadows
-  --shadow--small: 0 0.5rem 1rem var(--color-black01);
-  --shadow--medium: 0 1rem 1.5rem var(--color-black02);
-  --shadow--big: 0 1rem 2rem var(--color-black03);
-  --shadow--huge: 0 2rem 3rem var(--color-black03);
+  --shadow-1: 0 0.5rem 1rem var(--color-black-01);
+  --shadow-2: 0 0.75rem 1rem var(--color-black-015);
+  --shadow-3: 0 1rem 1.5rem var(--color-black-02);
+  --shadow-4: 0 1rem 2rem var(--color-black-02);
+  --shadow-5: 0 2rem 3rem var(--color-black-03);
+  --shadow-6: 0 2rem 3.5rem var(--color-black-03);
+  --shadow-7: 0 3rem 4rem var(--color-black-03);
 
   //--- TRANSITIONS ---//
   --trans-dur-primary: 0.2s;
+
+  //--- MARGIN ---//
+  --space-huge: 12rem;
+  --space-big: 8rem;
+  --space-medium: 5rem;
+  --space-small: 3rem;
+  --space-smallest: 2rem;
+  --space-tiny: 1rem;
 }

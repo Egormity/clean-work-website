@@ -1,9 +1,9 @@
 .people {
   @include grid-colums-primary-center;
-  @include margin-top-main;
+  margin-top: var(--space-huge);
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
@@ -11,7 +11,7 @@
   &__heading {
     grid-column: 1 / -1;
     justify-self: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-smallest);
   }
 
   &__card {
@@ -28,6 +28,7 @@
 
   &__img {
     border-radius: 1rem;
+    box-shadow: var(--shadow-2);
 
     & img {
       width: 100%;
