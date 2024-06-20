@@ -1,0 +1,40 @@
+.service {
+  @include grid-colums-primary-center;
+  @include margin-top-main;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 1rem;
+  }
+
+  &__photo {
+    position: relative;
+
+    &--img {
+      width: 100%;
+    }
+
+    &--container {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-primary-light);
+      color: var(--color-white);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+
+      display: grid;
+      grid-template-rows: repeat(2, max-content) 1fr;
+
+      & .number {
+        margin-top: 1rem;
+        align-self: end;
+      }
+    }
+  }
+}

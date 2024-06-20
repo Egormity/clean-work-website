@@ -1,0 +1,51 @@
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  // @include responsive(px1200) {
+  //   ///// width < 1200px
+  //   font-size: 56.25%; ///// 1 rem = 9px; 9px/16px = 56.25%
+  // }
+
+  // @include responsive(px600) {
+  //   ///// width < 900px
+  //   font-size: 50%; ///// 1 rem = 8px; 8px/16px = 50%
+  // }
+
+  // @include responsive(px1800) {
+  //   ///// width > 1800px
+  //   font-size: 68.75%; ///// 1 rem = 11px; 12px/16px = 68.75%
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  @include grid-columns-primary;
+  grid-template-rows: 100vh repeat(3, min-content);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;
+}
+
+* input,
+* button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* img {
+  display: block;
+}

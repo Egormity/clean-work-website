@@ -1,0 +1,89 @@
+.header {
+  background-image: linear-gradient(
+      to bottom,
+      var(--color-primary-light05),
+      var(--color-primary-light05)
+    ),
+    url('/images/slideshow/slide1.jpg');
+  color: var(--color-white);
+  grid-column: 1 / -1;
+
+  &__info {
+    background-color: var(--color-primary-light);
+    height: 5rem;
+
+    display: grid;
+    @include grid-columns-primary;
+
+    &--container {
+      @include grid-colums-primary-center;
+      align-self: center;
+
+      display: grid;
+      grid-template-columns: repeat(2, max-content) 1fr;
+      grid-gap: 2rem;
+    }
+
+    &--icon {
+      justify-self: right;
+    }
+  }
+
+  &__container {
+    margin-top: 2rem;
+    height: calc(100vh - 7rem);
+
+    display: grid;
+    @include grid-columns-primary;
+    grid-template-rows: max-content 1fr;
+  }
+
+  &__nav {
+    @include grid-colums-primary-center;
+
+    display: grid;
+    grid-template-columns: 1fr repeat(5, max-content);
+    align-items: center;
+    grid-gap: 3rem;
+
+    &--logo {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      align-items: center;
+      grid-gap: 2rem;
+    }
+  }
+
+  &__center {
+    @include grid-colums-primary-center;
+    align-self: center;
+    justify-self: center;
+    transform: translateY(-5rem);
+
+    @media only screen and (max-height: 700px) {
+      transform: translate(0);
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+
+    &--heading {
+      grid-column: 1 / -1;
+    }
+
+    &--btn-1 {
+      justify-self: right;
+    }
+
+    &--btn-2 {
+      justify-self: left;
+    }
+  }
+
+  &__change {
+    color: var(--color-yellow);
+  }
+}
