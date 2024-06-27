@@ -1,4 +1,63 @@
 .footer {
-  grid-column: 1 / -1;
+  display: grid;
+  @include grid-columns-primary;
+
   background-color: var(--color-primary-light);
+  color: var(--color-white);
+
+  &__container {
+    @include grid-colums-primary-center;
+
+    display: grid;
+    grid-gap: var(--space-small);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-smallest);
+
+    &--logo {
+      margin-right: var(--space-small);
+    }
+  }
+
+  &__middle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: var(--space-small);
+
+    &--services {
+      background-color: rgba(255, 0, 0, 0.247);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-gap: var(--space-super-tiny);
+
+      & p {
+        @include grid-colums-full-center;
+        margin-bottom: var(--space-tiny);
+      }
+
+      & a {
+        display: flex;
+        align-items: center;
+
+        gap: var(--space-tiny);
+      }
+    }
+
+    &--office {
+      background-color: rgba(30, 255, 0, 0.247);
+    }
+
+    &--hours {
+      background-color: rgba(47, 0, 255, 0.247);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-small);
+  }
 }

@@ -1,7 +1,4 @@
 .offers {
-  @include grid-colums-primary-center;
-  margin-top: var(--space-huge);
-
   display: grid;
   grid-template-rows: repeat(2, min-content);
 

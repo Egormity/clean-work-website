@@ -43,6 +43,15 @@
   grid-column: 2 / 3;
 }
 
+@mixin grid-colums-full-center {
+  grid-column: 1 / -1;
+}
+
+//--- PADDING ---//
+@mixin padding-primary {
+  padding: 10rem 0;
+}
+
 //--- RESPONSIVE DESIGN ---//
 @mixin responsive($breakpoint) {
   @if $breakpoint == px100 {

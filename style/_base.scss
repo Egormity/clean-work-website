@@ -23,7 +23,7 @@ body {
   box-sizing: border-box;
   display: grid;
   @include grid-columns-primary;
-  grid-template-rows: 100vh repeat(7, min-content);
+  grid-template-rows: 100vh repeat(auto-fit, min-content);
 }
 
 *,
@@ -48,4 +48,47 @@ body {
 
 * img {
   display: block;
+}
+
+.header {
+  @include grid-colums-full-center;
+}
+
+.about-us {
+  @include grid-colums-primary-center;
+  @include padding-primary;
+}
+
+.offers {
+  @include grid-colums-primary-center;
+  @include padding-primary;
+  padding-top: 0;
+}
+
+.people {
+  @include grid-colums-primary-center;
+  @include padding-primary;
+  padding-top: 0;
+}
+
+.reviews {
+  @include grid-colums-full-center;
+  @include padding-primary;
+}
+
+.trusted-by {
+  @include grid-colums-primary-center;
+  justify-self: center;
+}
+
+.companies {
+  @include grid-colums-full-center;
+  @include padding-primary;
+  padding-left: var(--space-medium);
+  padding-right: var(--space-medium);
+}
+
+.footer {
+  @include grid-colums-full-center;
+  @include padding-primary;
 }

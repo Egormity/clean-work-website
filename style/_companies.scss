@@ -1,26 +1,27 @@
+.trusted-by {
+  display: flex;
+  align-items: center;
+
+  height: 5rem;
+  padding: 0 2rem;
+  box-shadow: var(--shadow-3);
+  border-radius: 10rem;
+  z-index: 10;
+  background-color: var(--color-white);
+  overflow: visible;
+
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+
 .companies {
-  @include grid-colums-primary-center;
-  position: relative;
-  background-color: grey;
-  padding: 5rem;
+  background-color: var(--color-grey-dark-1);
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   justify-items: left;
   align-items: center;
-  grid-gap: 2rem;
-
-  &__heading {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 1rem 2rem;
-    box-shadow: var(--shadow-3);
-    border-radius: 10rem;
-    z-index: 10;
-  }
+  grid-row-gap: var(--space-small);
 
   &__logo {
     height: 4rem;

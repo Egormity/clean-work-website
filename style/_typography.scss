@@ -50,6 +50,11 @@ body {
   background-color: var(--color-white);
   border-radius: 50%;
   padding: 1.25rem;
+  transition: var(--trans-dur-primary);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .fw-600 {
@@ -90,6 +95,8 @@ body {
 
 .color-primary-light,
 .color-primary-dark,
+.hover-primary-light,
+.hover-primary-dark,
 .btn--border-light,
 .btn--blue {
   transition: all var(--trans-dur-primary);

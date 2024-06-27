@@ -1,7 +1,4 @@
 .people {
-  @include grid-colums-primary-center;
-  margin-top: var(--space-huge);
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
