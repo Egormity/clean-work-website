@@ -2,24 +2,39 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
-  grid-column-gap: 5rem;
-  grid-row-gap: 3rem;
+  grid-column-gap: var(--space-medium);
+  grid-row-gap: var(--space-small);
+
+  @include responsive(max500px) {
+    grid-gap: var(--space-medium);
+  }
+
+  @include grid-400px-less-fix;
 
   &__heading {
     grid-column: 1 / -1;
     justify-self: center;
     margin-bottom: var(--space-smallest);
+
+    @include responsive(max500px) {
+      margin-bottom: -2rem;
+    }
   }
 
   &__card {
     display: grid;
     grid-template-columns: 4fr 3fr;
-    grid-gap: 3rem;
+    grid-gap: var(--space-small);
     align-items: center;
 
     &--line {
       height: 1px;
       background-color: var(--color-grey-light-4);
+    }
+
+    @include responsive(max500px) {
+      grid-template-columns: 1fr;
+      grid-gap: var(--space-smallest);
     }
   }
 

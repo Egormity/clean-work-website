@@ -17,6 +17,11 @@
     grid-column: 1/ -1;
     justify-self: center;
     margin-bottom: var(--space-small);
+
+    @include responsive(max400px) {
+      text-align: left;
+      margin-left: 2rem;
+    }
   }
 
   &__cards--container {
@@ -25,6 +30,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 2rem;
+
+    @include grid-400px-less-fix;
   }
 
   &__card {

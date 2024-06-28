@@ -26,16 +26,20 @@
 @mixin grid-columns-primary {
   grid-template-columns: 15vw 1fr 15vw;
 
-  @include responsive(px1800) {
+  @include responsive(max1800px) {
     grid-template-columns: 8vw 1fr 8vw;
   }
 
-  @include responsive(px1500) {
+  @include responsive(max1500px) {
     grid-template-columns: 5.5vw 1fr 8vw;
   }
 
-  @include responsive(px1000) {
+  @include responsive(max1000px) {
     grid-template-columns: 3rem 1fr 3rem;
+  }
+
+  @include responsive(max400px) {
+    grid-template-columns: 2rem 1fr 2rem;
   }
 }
 
@@ -47,6 +51,17 @@
   grid-column: 1 / -1;
 }
 
+@mixin grid-400px-less-fix {
+  @include responsive(max400px) {
+    grid-template-columns: 35rem;
+    justify-content: left;
+  }
+
+  @include responsive(max300px) {
+    grid-template-columns: 30rem;
+  }
+}
+
 //--- PADDING ---//
 @mixin padding-primary {
   padding: 10rem 0;
@@ -54,121 +69,243 @@
 
 //--- RESPONSIVE DESIGN ---//
 @mixin responsive($breakpoint) {
-  @if $breakpoint == px100 {
+  //--- MAX WIDTH ---//
+  @if $breakpoint == max100px {
     @media only screen and (max-width: 6.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px200 {
+  @if $breakpoint == max200px {
     @media only screen and (max-width: 12.5em) {
       @content;
     }
   }
 
-  @if $breakpoint == px300 {
+  @if $breakpoint == max300px {
     @media only screen and (max-width: 18.75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px400 {
+  @if $breakpoint == max400px {
     @media only screen and (max-width: 25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px500 {
+  @if $breakpoint == max500px {
     @media only screen and (max-width: 31.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px600 {
+  @if $breakpoint == max600px {
     @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
 
-  @if $breakpoint == px700 {
+  @if $breakpoint == max700px {
     @media only screen and (max-width: 43.75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px800 {
+  @if $breakpoint == max800px {
     @media only screen and (max-width: 50em) {
       @content;
     }
   }
 
-  @if $breakpoint == px900 {
+  @if $breakpoint == max900px {
     @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1000 {
+  @if $breakpoint == max1000px {
     @media only screen and (max-width: 62.5em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1100 {
+  @if $breakpoint == max1100px {
     @media only screen and (max-width: 68.75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1200 {
+  @if $breakpoint == max1200px {
     @media only screen and (max-width: 75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1300 {
+  @if $breakpoint == max1300px {
     @media only screen and (max-width: 81.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1400 {
+  @if $breakpoint == max1400px {
     @media only screen and (max-width: 87.5em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1500 {
+  @if $breakpoint == max1500px {
     @media only screen and (max-width: 93.75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1600 {
+  @if $breakpoint == max1600px {
     @media only screen and (max-width: 100em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1700 {
+  @if $breakpoint == max1700px {
     @media only screen and (max-width: 106.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1800 {
+  @if $breakpoint == max1800px {
     @media only screen and (max-width: 112.5em) {
       @content;
     }
   }
 
-  @if $breakpoint == px1900 {
+  @if $breakpoint == max1900px {
     @media only screen and (max-width: 118.75em) {
       @content;
     }
   }
 
-  @if $breakpoint == px2000 {
+  @if $breakpoint == max2000px {
+    @media only screen and (max-width: 125em) {
+      @content;
+    }
+  }
+
+  //--- MIN WIDTH ---//
+  @if $breakpoint == min100px {
+    @media only screen and (min-width: 6.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min200px {
+    @media only screen and (min-width: 12.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min300px {
+    @media only screen and (min-width: 18.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min400px {
+    @media only screen and (min-width: 25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min500px {
+    @media only screen and (min-width: 31.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min600px {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min700px {
+    @media only screen and (min-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min800px {
+    @media only screen and (min-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min900px {
+    @media only screen and (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1000px {
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1100px {
+    @media only screen and (min-width: 68.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1200px {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1300px {
+    @media only screen and (min-width: 81.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1400px {
+    @media only screen and (min-width: 87.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1500px {
+    @media only screen and (min-width: 93.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1600px {
+    @media only screen and (min-width: 100em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1700px {
+    @media only screen and (min-width: 106.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1800px {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min1900px {
+    @media only screen and (min-width: 118.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == min2000px {
     @media only screen and (min-width: 125em) {
       @content;
     }

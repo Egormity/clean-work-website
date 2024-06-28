@@ -5,11 +5,22 @@
       var(--color-primary-light05)
     ),
     url('/images/slideshow/slide1.jpg');
+  background-size: cover;
+  background-position: center;
   color: var(--color-white);
 
   &__info {
     background-color: var(--color-primary-light);
-    height: 5rem;
+    height: 6rem;
+    padding: 2rem 0;
+
+    @include responsive(max600px) {
+      height: 10rem;
+    }
+
+    @include responsive(max400px) {
+      height: 15rem;
+    }
 
     display: grid;
     @include grid-columns-primary;
@@ -21,20 +32,38 @@
       display: grid;
       grid-template-columns: repeat(2, max-content) 1fr;
       grid-gap: 2rem;
+
+      @include responsive(max600px) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        justify-items: center;
+      }
     }
 
     &--icon {
       justify-self: right;
+
+      @include responsive(max600px) {
+        justify-self: auto;
+      }
     }
   }
 
   &__container {
     margin-top: 2rem;
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 6rem);
+    position: relative;
 
     display: grid;
     @include grid-columns-primary;
     grid-template-rows: max-content 1fr;
+
+    @include responsive(max600px) {
+      height: calc(100vh - 10rem);
+    }
+
+    @include responsive(max400px) {
+      height: calc(100vh - 15rem);
+    }
   }
 
   &__nav {
@@ -50,6 +79,18 @@
       grid-template-columns: repeat(2, max-content);
       align-items: center;
       grid-gap: 2rem;
+
+      @include responsive(max700px) {
+        position: absolute;
+        left: 10%;
+        top: 0%;
+      }
+    }
+
+    &--item {
+      @include responsive(max700px) {
+        display: none;
+      }
     }
   }
 
@@ -58,13 +99,14 @@
     align-self: center;
     justify-self: center;
     transform: translateY(-5rem);
+    text-align: center;
 
-    @media only screen and (max-height: 700px) {
-      transform: translate(0);
+    @include responsive(max700px) {
+      transform: translateY(-1rem);
     }
 
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     grid-row-gap: 1rem;
     grid-column-gap: 2rem;
@@ -84,5 +126,109 @@
 
   &__change {
     color: var(--color-yellow);
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+//--- NAV MENU ---//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+.nav {
+  &__menu {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    @include flex-center;
+    flex-direction: column;
+    z-index: 10;
+
+    background-color: var(--color-white);
+    color: var(--color-grey-dark-4);
+    transition: all var(--trans-dur-primary);
+    border-radius: 50%;
+
+    &--active {
+      border-radius: 2rem;
+      padding: 2rem 4rem;
+    }
+
+    &--container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-smallest);
+      border-radius: 1rem;
+      transition: all var(--trans-dur-primary);
+    }
+  }
+
+  &__icon {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    position: relative;
+    cursor: pointer;
+
+    &--active {
+      margin-bottom: var(--space-smallest);
+    }
+
+    display: none;
+
+    @include responsive(max700px) {
+      display: block;
+    }
+
+    &--top,
+    &--middle,
+    &--bottom {
+      height: 0.2rem;
+      width: 3.5rem;
+      background-color: var(--color-grey-dark-4);
+      border-radius: 10rem;
+      transition: all 0.2s;
+    }
+
+    &--top {
+      position: absolute;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -35%);
+
+      &--hover {
+        top: 31%;
+        transform: translate(-50%, -31%);
+      }
+
+      &--click {
+        @include absolute-center;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    &--middle {
+      @include absolute-center;
+
+      &--click {
+        opacity: 0;
+      }
+    }
+
+    &--bottom {
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -65%);
+
+      &--hover {
+        top: 68%;
+        transform: translate(-50%, -68%);
+      }
+
+      &--click {
+        @include absolute-center;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
   }
 }

@@ -7,6 +7,8 @@
   grid-column-gap: 3rem;
   align-items: center;
 
+  @include grid-400px-less-fix;
+
   &__photo {
     border-radius: 2rem;
     box-shadow: var(--shadow-2);
@@ -14,6 +16,10 @@
     &--img {
       width: 100%;
     }
+  }
+
+  & .heading-2 {
+    margin-top: var(--space-tiny);
   }
 
   &__content {

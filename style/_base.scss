@@ -1,22 +1,18 @@
 html {
-  // This defines what 1rem is
-  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+  font-size: 62.5%; // 1 rem = 10px
   scroll-behavior: smooth;
 
-  // @include responsive(px1200) {
-  //   ///// width < 1200px
-  //   font-size: 56.25%; ///// 1 rem = 9px; 9px/16px = 56.25%
-  // }
+  @include responsive(max1200px) {
+    font-size: 56.25%; ///// 1 rem = 9px
+  }
 
-  // @include responsive(px600) {
-  //   ///// width < 900px
-  //   font-size: 50%; ///// 1 rem = 8px; 8px/16px = 50%
-  // }
+  @include responsive(max600px) {
+    font-size: 50%; ///// 1 rem = 8px
+  }
 
-  // @include responsive(px1800) {
-  //   ///// width > 1800px
-  //   font-size: 68.75%; ///// 1 rem = 11px; 12px/16px = 68.75%
-  // }
+  @include responsive(min1800px) {
+    font-size: 68.75%; ///// 1 rem = 11px
+  }
 }
 
 body {

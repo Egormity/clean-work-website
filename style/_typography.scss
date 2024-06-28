@@ -144,3 +144,10 @@ body {
     transform: scale(1.1) skewX(-15deg);
   }
 }
+
+.hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}

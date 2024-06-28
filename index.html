@@ -52,15 +52,37 @@
             <img class="logo" src="images/logo.png" alt="Clean work logo" />
             <p class="heading-4 header-light">Clean Work</p>
           </a>
-          <a href="#" class="text-2 hover-primary-light fw-600">Home</a>
-          <a href="#" class="text-2 hover-primary-light fw-600">About us</a>
-          <a href="#" class="text-2 hover-primary-light fw-600">Prices</a>
-          <a href="#" class="text-2 hover-primary-light fw-600">Reviews</a>
-          <a href="#" class="text-2 btn--border-light fw-600">Contacts</a>
+          <a href="#" class="header__nav--item text-2 hover-primary-light fw-600">Home</a>
+          <a href="#" class="header__nav--item text-2 hover-primary-light fw-600">About us</a>
+          <a href="#" class="header__nav--item text-2 hover-primary-light fw-600">Prices</a>
+          <a href="#" class="header__nav--item text-2 hover-primary-light fw-600">Reviews</a>
+          <a href="#" class="header__nav--item text-2 btn--border-light fw-600">Contacts</a>
+
+          <!-- NAV MENU -->
+          <div class="nav__menu">
+            <div class="nav__icon">
+              <span class="nav__icon--top"></span>
+              <span class="nav__icon--middle"></span>
+              <span class="nav__icon--bottom"></span>
+            </div>
+            <div class="nav__menu--container hidden">
+              <a href="#" class="nav__icon--item text-2 hover-primary-light fw-600">Home</a>
+              <a href="#about" class="nav__icon--item text-2 hover-primary-light fw-600"
+                >About us</a
+              >
+              <a href="#offers" class="nav__icon--item text-2 hover-primary-light fw-600">Prices</a>
+              <a href="#reviews" class="nav__icon--item text-2 hover-primary-light fw-600"
+                >Reviews</a
+              >
+              <a href="#footer" class="nav__icon--item text-2 hover-primary-light fw-600"
+                >Contacts</a
+              >
+            </div>
+          </div>
         </nav>
 
         <!-- HEADER CENTER -->
-        <div class="header__center u-overflow-visible">
+        <div class="header__center u-overflow-visible ">
           <p class="heading-1 fw-800 header__center--heading">
             We clean your <span class="header__change">House</span>
           </p>
@@ -73,7 +95,7 @@
     </header>
 
     <!-- SECTION ABOUT US -->
-    <section class="about-us">
+    <section class="about-us" id="about">
       <!-- SECTION SERVICE -->
       <div class="service">
         <!-- TEXT -->
@@ -151,7 +173,7 @@
     </section>
 
     <!-- SECTION OFFERS -->
-    <section class="offers">
+    <section class="offers" id="offers">
       <!-- HEADING -->
       <p class="heading-2 offers__heading heading-dark fw-800">Our Best Offers</p>
       <div class="offers__cards--container">
@@ -284,7 +306,7 @@
     </section>
 
     <!-- SECTION PEOPLE -->
-    <section class="people u-overflow-visible">
+    <section class="people u-overflow-visible" id="people">
       <!-- HEADING -->
       <p class="people__heading heading-2 heading-dark fw-800">Meet Our People</p>
 
@@ -370,7 +392,7 @@
     </section>
 
     <!-- SECTION REVIEWS -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <p class="heading-2 fw-800 reviews__heading">Our Customers Reviews</p>
 
       <div class="reviews__cards--container u-overflow-visible">
@@ -424,7 +446,10 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-2 reviews__text"></p>
+          <p class="text-2 reviews__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore.
+          </p>
         </div>
 
         <!-- REVIEWS CARD 4 -->
@@ -499,21 +524,22 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__container u-overflow-visible">
         <!-- TOP PART -->
         <div class="footer__top u-overflow-visible">
           <a href="#" class="footer__top--logo u-overflow-visible">
             <img class="logo" src="images/logo.png" alt="Clean work logo" />
           </a>
-          <a href="#" class="text-3 hover-primary-dark">About Us</a>
-          <a href="#" class="text-3 hover-primary-dark">Blog</a>
-          <a href="#" class="text-3 hover-primary-dark">Reviews</a>
-          <a href="#" class="text-3 hover-primary-dark">Contacts</a>
+          <a href="#about" class="text-3 hover-primary-dark">About Us</a>
+          <a href="#offers" class="text-3 hover-primary-dark">Our offers</a>
+          <a href="#people" class="text-3 hover-primary-dark">Our workers</a>
+          <a href="#reviews" class="text-3 hover-primary-dark">reviews</a>
         </div>
 
         <!-- MIDDLE PART -->
         <div class="footer__middle">
+          <!-- MIIDLE SERVICES -->
           <div class="footer__middle--services">
             <!-- HEADING -->
             <p class="heading-3 fw-600">Our Services</p>
@@ -543,8 +569,47 @@
               ><i class="fa-solid fa-angles-right"></i>Loundry</a
             >
           </div>
-          <div class="footer__middle--office">OFFICE</div>
-          <div class="footer__middle--hours">SERVICE HOURS</div>
+
+          <!-- MIDDLE OFFICE -->
+          <div class="footer__middle--office">
+            <p class="heading-3 fw-600">Ofiice</p>
+            <a href="#" class="text-3 hover-primary-dark"
+              ><i class="fa-solid fa-location-dot"></i>Akershusstranda 20, 0150 Oslo, Norway</a
+            >
+            <a href="#" class="text-3 hover-primary-dark"
+              ><i class="fa-solid fa-phone"></i>8 800 555 35-35</a
+            >
+            <a href="#" class="text-3 hover-primary-dark"
+              ><i class="fa-solid fa-envelope"></i>info@company.com</a
+            >
+            <div class="footer__middle--icons">
+              <a href="#">
+                <span></span>
+                <i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#">
+                <span></span>
+                <i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#">
+                <span></span>
+                <i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- MIDDLE HOURS -->
+          <div class="footer__middle--hours">
+            <p class="heading-3 fw-600">Service Hours</p>
+            <div>
+              <p class="text-3 fw-600">Mon - Fri</p>
+              <p class="text-3">8:00 AM - 5:30 PM</p>
+            </div>
+            <div>
+              <p class="text-3 fw-600">Sat</p>
+              <p class="text-3">9:00 AM - 3:30 PM</p>
+            </div>
+          </div>
         </div>
 
         <!-- BOTTOM PART -->
@@ -558,8 +623,15 @@
               class="hover-primary-dark"
               style="text-decoration: underline;"
               >Tooplate</a
+            >. Made by
+            <a
+              href="https://github.com/Egormity"
+              target="_blank"
+              class="hover-primary-dark"
+              style="text-decoration: underline;"
+              >Egormity</a
             >
-            //.
+            //
           </p>
         </div>
       </div>
